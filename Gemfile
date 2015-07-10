@@ -13,7 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'quiet_assets'
 gem 'textacular', '~> 3.0'
 gem 'sqlite3'
-
+gem 'devise'
 
 group :development, :test do
   gem 'byebug'

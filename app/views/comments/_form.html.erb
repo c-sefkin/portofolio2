@@ -1,0 +1,11 @@
+<%= form_for [@blog, @comment], :html => {:class => "form"} do |f| %>
+  <%= render 'layouts/errors', :object => @comment %>
+
+  <div class="field">
+    <%= f.label :text %><br>
+    <%= f.text_field :text %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
