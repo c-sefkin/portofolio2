@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="about-content row">
+    <div class="col-sm-6">
+      <div class="col-sm-4">
+        <div class="image-div">
+        </div>
+      </div>
+
+      <div class="about-text col-sm-8">
+        <h1>About</h1>
+        <p class="about-text">Chris's Portfolio</p>
+        <ul>
+          <li><b>Phone</b> 503-307-8579</li>
+          <li><b>Email</b> c.sefkin@gmail.com</li>
+        </ul>
+      </div>
+
+    </div>
+
+  <div class="col-sm-6">
+    <h1>Skillz</h1>
+
+    <ul>
+      <% @skills.each do |skill| %>
+        <li><%= link_to skill.name, skill_path(skill) %>
+        <%= link_to "Delete", skill_path(skill),
+                             :data => {:confirm => "Are you sure?",
+                                            :method => "delete"} %> |
+        <%= link_to "Edit", edit_skill_path(skill) %></li>
+      <% end %>
+    </ul>
+
+      <%= link_to "Add a Skill", new_skill_path %>
+    </div>
+  </div>
+</div>
